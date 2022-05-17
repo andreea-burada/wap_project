@@ -41,7 +41,7 @@
             // timerSplashScreen
             // 
             this.timerSplashScreen.Enabled = true;
-            this.timerSplashScreen.Interval = 5000;
+            this.timerSplashScreen.Interval = 1500;
             this.timerSplashScreen.Tick += new System.EventHandler(this.timerSplashScreen_Tick);
             // 
             // pictureBox1
@@ -50,9 +50,10 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 437);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 353);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(113, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -60,9 +61,10 @@
             // lbWhiteBackground
             // 
             this.lbWhiteBackground.BackColor = System.Drawing.Color.White;
-            this.lbWhiteBackground.Location = new System.Drawing.Point(1, 419);
+            this.lbWhiteBackground.Location = new System.Drawing.Point(1, 340);
+            this.lbWhiteBackground.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbWhiteBackground.Name = "lbWhiteBackground";
-            this.lbWhiteBackground.Size = new System.Drawing.Size(873, 101);
+            this.lbWhiteBackground.Size = new System.Drawing.Size(655, 82);
             this.lbWhiteBackground.TabIndex = 1;
             // 
             // pbHotelLogo
@@ -70,24 +72,26 @@
             this.pbHotelLogo.BackColor = System.Drawing.Color.White;
             this.pbHotelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbHotelLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbHotelLogo.Image")));
-            this.pbHotelLogo.Location = new System.Drawing.Point(714, 419);
+            this.pbHotelLogo.Location = new System.Drawing.Point(536, 340);
+            this.pbHotelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pbHotelLogo.Name = "pbHotelLogo";
-            this.pbHotelLogo.Size = new System.Drawing.Size(118, 101);
+            this.pbHotelLogo.Size = new System.Drawing.Size(88, 88);
             this.pbHotelLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbHotelLogo.TabIndex = 2;
             this.pbHotelLogo.TabStop = false;
             // 
             // SplashScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(868, 519);
+            this.ClientSize = new System.Drawing.Size(651, 422);
             this.Controls.Add(this.pbHotelLogo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbWhiteBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";

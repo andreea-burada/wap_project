@@ -117,14 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>221, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA1oAAANSCAYAAAB88b/zAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAA/7JJREFUeF7s/QucZVV5p4+H7q6u7rpX9b1paO73trmJIKIIghgMCsERg0qiUScY
+        vgAADr4B6kKxwAAA/7JJREFUeF7s/QucZVV5p4+H7q6u7rpX9b1paO73trmJIKIIghgMCsERg0qiUScY
         NeIEI06MAUeNmKh/cdRRE0xw1MQkOuqoP53R6MTbyEgkoigKfb9f637d//d537XOOd3cuqp2VZ3q/j71
         WZ+9zz77stbaa596v/td612/UQghhBBCCCGEKBUJLSGEEEIIIYQoGQktIYQQQgghhCgZCS0hhBBCCCGE
         KBkJLSGEEEIIIYQoGQktIYQQQgghhCgZCS0hhBBCCCGEKBkJLSGEEEIIIYQoGQktIYQQQgghhCgZCS0h
@@ -1802,7 +1799,7 @@
         WkIIIYQQQghRMRJaQgghhBBCCFEpKf3/AS9D4WuqF+BOAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="signupErrors.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
 </root>
