@@ -54,21 +54,21 @@ namespace wap_Project.Forms
         #region FieldClickChangeColor
         private void updownId_Enter(object sender, EventArgs e)
         {
-            updownId.BackColor = Color.CadetBlue;
+            updownId.BackColor = Color.DarkCyan;
         }
 
         private void updownId_Leave(object sender, EventArgs e)
         {
-            updownId.BackColor = Color.PowderBlue;
+            updownId.BackColor = Color.CadetBlue;
         }
 
         private void tbDescription_Enter(object sender, EventArgs e)
         {
-            tbDescription.BackColor = Color.CadetBlue;
+            tbDescription.BackColor = Color.DarkCyan;
         }
         private void tbDescription_Leave(object sender, EventArgs e)
         {
-            tbDescription.BackColor = Color.PowderBlue;
+            tbDescription.BackColor = Color.CadetBlue;
         }
 
 
@@ -84,6 +84,16 @@ namespace wap_Project.Forms
             {
                 tbImagePath.Text = imagePathWindow.FileName;
             }
+        }
+
+        private void updownCapacity_Enter(object sender, EventArgs e)
+        {
+            updownCapacity.BackColor = Color.DarkCyan;
+        }
+
+        private void updownCapacity_Leave(object sender, EventArgs e)
+        {
+            updownCapacity.BackColor = Color.CadetBlue;
         }
     }
 }

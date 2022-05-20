@@ -21,9 +21,51 @@ namespace wap_Project.Forms
         {
             _clients = new List<Client>();
             InitializeComponent();
+        }
+        private void LoginForm_Load(object sender, EventArgs e) 
+        { 
             loadClientsDB();
         }
-        private void LoginForm_Load(object sender, EventArgs e) { }
+
+        // load clients from db
+        private void loadClientsDB()
+        {
+            const string query = "select * from Clients";
+
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+
+                var command = new SQLiteCommand(query, connection);
+
+                using (SQLiteDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        //long id = (long)reader["Id"];
+                        //string lastName = (string)reader["LastName"];
+                        //string firstName = (string)reader["FirstName"];
+                        //DateTime birthDate = DateTime.Parse((string)reader["BirthDate"]);
+
+                        Guid id = Guid.Parse((string)reader["id"]);
+                        string first_name = (string)reader["first_name"];
+                        string last_name = (string)reader["last_name"];
+                        string email = (string)reader["email"];
+                        string username = (string)reader["username"];
+                        int age = Int32.Parse(reader["age"].ToString());
+                        long phone_number = Int64.Parse(reader["phone_number"].ToString());
+                        string password = (string)reader["password"];
+                        int pronoun = Int32.Parse(reader["pronoun"].ToString());
+                        int question_id = Int32.Parse(reader["security_index"].ToString());
+                        string security_q_answer = (string)reader["security_answer"];
+
+                        Client _newClient = new Client(id, first_name, last_name, email, age, username, password,
+                            question_id, security_q_answer, pronoun, phone_number);
+                        _clients.Add(_newClient);
+                    }
+                }
+            }
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -96,46 +138,7 @@ namespace wap_Project.Forms
 
             }
             this.Show();
-        }
-
-        private void loadClientsDB()
-        {
-            const string query = "select * from Clients";
-
-            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
-            {
-                connection.Open();
-
-                var command = new SQLiteCommand(query, connection);
-
-                using (SQLiteDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        //long id = (long)reader["Id"];
-                        //string lastName = (string)reader["LastName"];
-                        //string firstName = (string)reader["FirstName"];
-                        //DateTime birthDate = DateTime.Parse((string)reader["BirthDate"]);
-
-                        Guid id = Guid.Parse((string)reader["id"]);
-                        string first_name = (string)reader["first_name"];
-                        string last_name = (string)reader["last_name"];
-                        string email = (string)reader["email"];
-                        string username = (string)reader["username"];
-                        int age = Int32.Parse(reader["age"].ToString());
-                        long phone_number = Int64.Parse(reader["phone_number"].ToString());
-                        string password = (string)reader["password"];
-                        int pronoun = Int32.Parse(reader["pronoun"].ToString());
-                        int question_id = Int32.Parse(reader["security_index"].ToString());
-                        string security_q_answer = (string)reader["security_answer"];
-
-                        Client _newClient = new Client(id, first_name, last_name, email, age, username, password,
-                            question_id, security_q_answer, pronoun, phone_number);
-                        _clients.Add(_newClient);
-                    }
-                }
-            }
-        }
+        } 
 
         #region Validations
         private bool usernameExists(string usernameToCheck)

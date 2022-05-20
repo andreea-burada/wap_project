@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripExplain = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnRooms = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -40,10 +41,9 @@
             // 
             this.btnAccept.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAccept.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAccept.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAccept.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccept.Location = new System.Drawing.Point(179, 49);
+            this.btnAccept.Location = new System.Drawing.Point(217, 61);
             this.btnAccept.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(125, 87);
@@ -55,10 +55,9 @@
             // 
             this.btnClients.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnClients.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClients.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClients.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClients.Location = new System.Drawing.Point(48, 49);
+            this.btnClients.Location = new System.Drawing.Point(86, 61);
             this.btnClients.Margin = new System.Windows.Forms.Padding(2);
             this.btnClients.Name = "btnClients";
             this.btnClients.Size = new System.Drawing.Size(127, 87);
@@ -69,27 +68,25 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 200);
+            this.toolStripExplain});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 385);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(494, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(553, 22);
             this.statusStrip1.TabIndex = 18;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripExplain
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripExplain.Name = "toolStripExplain";
+            this.toolStripExplain.Size = new System.Drawing.Size(0, 17);
             // 
             // btnRooms
             // 
             this.btnRooms.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnRooms.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRooms.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnRooms.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnRooms.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRooms.Location = new System.Drawing.Point(308, 50);
+            this.btnRooms.Location = new System.Drawing.Point(346, 61);
             this.btnRooms.Margin = new System.Windows.Forms.Padding(2);
             this.btnRooms.Name = "btnRooms";
             this.btnRooms.Size = new System.Drawing.Size(125, 87);
@@ -102,14 +99,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 222);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(553, 407);
             this.Controls.Add(this.btnRooms);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.btnClients);
+            this.DoubleBuffered = true;
             this.Name = "AdminPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPage";
+            this.Load += new System.EventHandler(this.AdminPage_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -122,7 +124,7 @@
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnClients;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripExplain;
         private System.Windows.Forms.Button btnRooms;
     }
 }

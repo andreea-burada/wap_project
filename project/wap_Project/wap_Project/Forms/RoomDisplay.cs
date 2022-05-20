@@ -25,6 +25,11 @@ namespace wap_Project.Forms
             _rooms = _current_rooms;
         }
 
+        private void RoomDisplay_Load(object sender, EventArgs e)
+        {
+            displayRooms();
+        }
+
         public void displayRooms()
         {
             _rooms.Sort();
@@ -52,14 +57,16 @@ namespace wap_Project.Forms
                 return;
             }
             RoomManager roomFormWindow = new RoomManager(toAddEdit);
-            roomFormWindow.ShowDialog();
-
-            if (isNew == true)
-                _rooms.Add(toAddEdit);
-            displayRooms();
-
-
-
+            this.Hide();
+            if (roomFormWindow.ShowDialog() == DialogResult.OK)
+            {
+                if (isNew == true)
+                    _rooms.Add(toAddEdit);
+                displayRooms();
+            }
+            this.Show();
         }
+
+        
     }
 }
